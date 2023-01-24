@@ -6,3 +6,4 @@ db.sqlite3
 .pyc
 *.pyc
 StravaAuth/strava_tokens.json
+db.sqlite3
