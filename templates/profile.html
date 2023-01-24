@@ -1,0 +1,36 @@
+{% block content %}
+
+    {% if athlete %}
+        <table id="athlete-table">
+            <tr>
+                <td class="athlete-headline" colspan="2"> "User Details" %</td>
+            </tr>
+            <tr>
+                <td class="athlete-img"><img src="{{ athlete.profile }}"</td>
+                <td class="athlete-name">{{ athlete.firstname }}&nbsp{{ athlete.lastname }}</td>
+            </tr>
+            <tr>
+                <td class="athlete-headline" colspan="2">{  "User Friends" }</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    {% for friend in athlete_friends %}
+                        <p>
+                            <a href="/strava/profile/{{ friend.id }}">{{ friend.firstname }}&nbsp{{ friend.lastname }}</a>
+                        </p>
+                    {% endfor %}
+                </td>
+            </tr>
+            <tr>
+                <td class="athlete-headline" colspan="2">{  "User Clubs" }</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    {% for club in athlete.clubs %}
+                        <p>{{ club.name }}</p>
+                    {% endfor %}
+                </td>
+            </tr>
+        </table>
+    {% endif %}
+{% endblock %}

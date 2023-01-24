@@ -113,8 +113,8 @@ AUTHENTICATION_BACKENDS = (
 )
 SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/connected/'
 SOCIAL_AUTH_STRAVA_SCOPE = ['activity:read_all']
-SOCIAL_AUTH_STRAVA_KEY = '83588'
-SOCIAL_AUTH_STRAVA_SECRET = os.getenv('CLIENT_SECRET')
+SOCIAL_AUTH_STRAVA_KEY = '55550'
+SOCIAL_AUTH_STRAVA_SECRET = os.getenv('STRAVA_CLIENT_SECRET')
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
